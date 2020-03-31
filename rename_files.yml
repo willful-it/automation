@@ -1,0 +1,14 @@
+---
+- Description: Salaries
+  MatchAll:
+   - Pagamento Ordenados e Subsídios
+   - VENCIMENTO RENATO
+  FinalNameSuffix: VencimentoRenato
+- Description: Meals Payment
+  MatchAll:
+   - SUBS ALMOCO RENATO
+  FinalNameSuffix: SubsAlmoçoRenato
+- Description: Trip Support
+  MatchAll:
+   - AJUDAS CUSTO RENATO
+  FinalNameSuffix: AjudasCustoRenato
