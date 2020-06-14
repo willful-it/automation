@@ -12,3 +12,32 @@
   MatchAll:
    - AJUDAS CUSTO RENATO
   FinalNameSuffix: AjudasCustoRenato
+- Description: IRS Retenções
+  MatchAll:
+   - IRS RETENCAO FONTE
+  FinalNameSuffix: PagamentoEstado_IRSRetencaoFonte
+- Description: TSU
+  MatchAll:
+   - TSU
+  FinalNameSuffix: PagamentoEstado_TSU
+- Description: EDP
+  MatchAll:
+   - ELETRICIDADE
+   - "808535353"
+  FinalNameSuffix: EDP_GasElectricidade
+  AppendCurrentFileName: true
+- Description: Altice
+  MatchAll:
+   - MEO - Serviços de Comunicações e Multimédia
+  FinalNameSuffix: Altice_Comunicacoes
+  AppendCurrentFileName: true
+- Description: Edenred Euroticket Refeição
+  MatchAll:
+   - Euroticket Refeição
+  FinalNameSuffix: Edenred_Euroticket_Refeição
+  AppendCurrentFileName: true
+- Description: Edenred Euroticket Estudante
+  MatchAll:
+   - Euroticket Estudante
+  FinalNameSuffix: Edenred_Euroticket_Estudante
+  AppendCurrentFileName: true

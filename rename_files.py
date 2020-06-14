@@ -54,7 +54,16 @@ def rename_file(f, matched_rule):
     date_ts = date.today().strftime("%Y%m%d")
     date_ts_detail = date.today().strftime("%B%Y")
     suffix = matched_rule.get("FinalNameSuffix", "")
-    new_name = f"{date_ts}_{suffix}_{date_ts_detail}.pdf"
+    append_file_name = matched_rule.get("AppendCurrentFileName", False)
+
+    if append_file_name:
+        base = os.path.basename(f)
+        current_filename = os.path.splitext(base)[0]
+        extra = f"_{current_filename}"
+    else:
+        extra = ""
+
+    new_name = f"{date_ts}_{suffix}{extra}_{date_ts_detail}.pdf"
     if new_name not in f:
         logging.info(f"renaming file to {new_name}")
         os.rename(f, os.path.dirname(f) + "/" + new_name)
